@@ -1,12 +1,10 @@
 package com.remi.rest.service
 
 import com.remi.grpc.account.GetRequest
-import com.remi.grpc.account.GetResponse
 import com.remi.grpc.account.AccountServiceGrpcKt.AccountServiceCoroutineStub
 import com.remi.rest.data.AccountData
 import net.devh.boot.grpc.client.inject.GrpcClient
 import org.springframework.stereotype.Service
-import kotlin.reflect.full.memberProperties
 
 @Service
 class AccountService() {
