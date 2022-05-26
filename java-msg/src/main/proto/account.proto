@@ -1,0 +1,27 @@
+syntax = "proto3";
+option java_multiple_files = true;
+package com.remi.grpc.account;
+
+service AccountService {
+  rpc Get(GetRequest) returns (GetResponse);
+}
+
+message GetRequest {
+  string id = 1;                    // account id
+  optional string keyword = 2;      // account name
+}
+
+message Response {
+  bool success = 1;
+  optional string errorMessage = 2;
+}
+
+message GetResponse {
+  Response resp = 1;
+  string id = 2;
+  string name = 3;
+  string createdAt = 4;
+  string updatedAt = 5;
+  string description = 6;
+  string type = 7;
+}
