@@ -4,7 +4,7 @@ import java.time.ZonedDateTime
 import javax.persistence.*
 
 @Entity
-@Table(name = "account", schema="gcp_billing")
+@Table(name = "account")
 class Account(
     @Id
     var id: String? = null,
